@@ -38,6 +38,9 @@ BUILD_DIR = build
 C_SOURCES =  \
 Core/Src/freertos.c \
 Core/Src/main.c \
+Core/Src/simo/gpio.c \
+Core/Src/simo/system_clock.c \
+Core/Src/simo/uart.c \
 Core/Src/stm32f1xx_hal_msp.c \
 Core/Src/stm32f1xx_hal_timebase_tim.c \
 Core/Src/stm32f1xx_it.c \
@@ -131,6 +134,10 @@ AS_INCLUDES = \
 # C includes
 C_INCLUDES =  \
 -ICore/Inc \
+-ICore/Inc/simo \
+-ICore/Inc/simo/gpio \
+-ICore/Inc/simo/system \
+-ICore/Inc/simo/uart \
 -IDrivers/CMSIS/Device/ST/STM32F1xx/Include \
 -IDrivers/CMSIS/Include \
 -IDrivers/STM32F1xx_HAL_Driver/Inc \
